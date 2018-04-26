@@ -1,0 +1,29 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        mc:Ignorable="d"
+        Title="BMI" Height="500" Width="525">
+    <StackPanel Background="Pink">
+
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Margin="10 40 10 10"> 身高:</TextBlock>
+            <TextBox Width="350" Height="30" Margin="20 40 10 10" x:Name="HeightBox" TextChanged="HeightBox_TextChanged" Background="Lavender">0</TextBox>
+            
+        </StackPanel>
+        <Slider Minimum="0" Maximum="250" x:Name="HeightBar" ValueChanged="HeightBar_ValueChanged" TickFrequency="1" IsSnapToTickEnabled="True"></Slider>
+
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Margin="10 40 10 10"> 体重:</TextBlock>
+            <TextBox Width="350" Height="30" Margin="20 40 10 10" x:Name="WeightBox" TextChanged="WeightBox_TextChanged" Background="Lavender">0</TextBox>
+           
+        </StackPanel>
+        <Slider Minimum="0" Maximum="150" x:Name="WeightBar" ValueChanged="WeightBar_ValueChanged"  TickFrequency="1" IsSnapToTickEnabled="True"></Slider>
+
+        
+
+        <TextBox TextAlignment="Center" FontSize="50" Foreground="Purple" Margin="50" x:Name="Answer" TextChanged="Answer_TextChanged" Background="LightBlue">0</TextBox>
+    </StackPanel>
+</Window>
